@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class RegimenSubsidiado : Liquidacion
+     public class RegimenSubsidiado : Liquidacion
     {
 
         public RegimenSubsidiado()

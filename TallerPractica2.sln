@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BB\BLL.csproj", "{1C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{0625F112-F28A-48C9-9C09-17FB5882A118}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerPractica2GUI", "TallerPractica2GUI\TallerPractica2GUI.csproj", "{0F480ABD-9C43-4EAE-87ED-736167225A79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0625F112-F28A-48C9-9C09-17FB5882A118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0625F112-F28A-48C9-9C09-17FB5882A118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0625F112-F28A-48C9-9C09-17FB5882A118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F480ABD-9C43-4EAE-87ED-736167225A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F480ABD-9C43-4EAE-87ED-736167225A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F480ABD-9C43-4EAE-87ED-736167225A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F480ABD-9C43-4EAE-87ED-736167225A79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

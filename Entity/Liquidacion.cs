@@ -13,21 +13,24 @@ namespace Entity
         public string NumeroLiquidacion { get; set; }
         public decimal SalarioDevengado { get; set; }
         public decimal ValorServicio { get; set; }
+        
 
 
         public decimal CuotaModerada { get; set; }
         public decimal TopeMaximo { get; set; }
         public decimal Tarifa { get; set; }
+        public decimal CuotaReal { get; set; }
 
         public abstract decimal ObtenerTarifa();
         public abstract decimal ObtenerTope();
-        public decimal LiquidacionCuotaModerada()
+        public void LiquidacionCuotaModerada()
         {
             Tarifa = ObtenerTarifa();
             TopeMaximo = ObtenerTope();
             CuotaModerada = ValorServicio * (Tarifa / 100) + ValorServicio;
+            CuotaReal = CuotaModerada;
             LiquidardarCuota();
-            return CuotaModerada;
+            
         }
 
         public void LiquidardarCuota()

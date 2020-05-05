@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class RegimenContributivo : Liquidacion
+     public class RegimenContributivo : Liquidacion
     {
         public override decimal ObtenerTarifa()
         {
