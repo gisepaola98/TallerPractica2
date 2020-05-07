@@ -1,0 +1,5 @@
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.csprojAssemblyReference.cache
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.Form1.resources
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.FrmConsultarLiquidaciones.resources
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.Properties.Resources.resources
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.csproj.GenerateResource.cache

@@ -7,39 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
+using BLL;
 
 namespace TallerPractica2GUI
 {
     public partial class Form1 : Form
+
     {
+        LiquidacionCuotaModeradoraService liquidacionCuotaModeradoraService;
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            liquidacionCuotaModeradoraService = new LiquidacionCuotaModeradoraService();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -47,14 +27,121 @@ namespace TallerPractica2GUI
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
 
+            Liquidacion liquidacion;
+            string Numeroliquidacion, Tipodeafiliacion, Identificacionpaciente;
+            Numeroliquidacion = txtnumerodeliquidacion.Text;
+            Identificacionpaciente = txtidentificaciondelpaciente.Text;
+            Tipodeafiliacion = cmbtipodeafilacion.Text;
+            if (Tipodeafiliacion.Equals("Regimen Contributivo"))
+            {
+                liquidacion = new RegimenContributivo();
+                liquidacion.SalarioDevengado = Convert.ToDecimal(txtSalariodevengado.Text);
+            }
+            else
+            {
+                liquidacion = new RegimenSubsidiado();
+            }
+            liquidacion.FechaAfiliacion = Convert.ToDateTime(txtFechadeAfiliacion.Text);
+            liquidacion.ValorServicio = Convert.ToDecimal(txtValorservicio.Text);
+            liquidacion.IdentificacionPaciente = Identificacionpaciente;
+            liquidacion.NumeroLiquidacion = Numeroliquidacion;
+            liquidacion.TipoAfiliacion = Tipodeafiliacion;
+            liquidacion.LiquidardarCuota();
+            liquidacion.SalarioDevengado = liquidacion.SalarioDevengado;
+
+            txtTopemaximo.Text = liquidacion.TopeMaximo.ToString();
+            txtCuotamoderadora.Text = liquidacion.CuotaModerada.ToString();
+            txtCuotamoderadorareal.Text = liquidacion.CuotaReal.ToString();
+            txtTarifa.Text = liquidacion.Tarifa.ToString();
+            string mensaje = liquidacionCuotaModeradoraService.Guardar(liquidacion);
+            MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Limpiar();
+        }
+        public void Limpiar()
+        {
+            txtnumerodeliquidacion.Text = " ";
+            txtFechadeAfiliacion.Text = "";
+            txtidentificaciondelpaciente.Text = "";
+            txtSalariodevengado.Text = "";
+            txtTarifa.Text = "";
+            txtCuotamoderadora.Text = "";
+            txtCuotamoderadorareal.Text = "";
+            txtValorservicio.Text = "";
+            txtTopemaximo.Text = "";
+
+
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string Numeroliquidacion = txtnumerodeliquidacion.Text;
+            if (Numeroliquidacion != "")
+            {
+                RespuestaEncontrado respuesta = new RespuestaEncontrado();
+                respuesta = liquidacionCuotaModeradoraService.Buscar(Numeroliquidacion);
+                if (respuesta.liquidacion != null)
+                {
+                    txtidentificaciondelpaciente.Text = respuesta.liquidacion.IdentificacionPaciente;
+                    cmbtipodeafilacion.Text = respuesta.liquidacion.TipoAfiliacion;
+                    txtidentificaciondelpaciente.Text = respuesta.liquidacion.SalarioDevengado.ToString();
+                    txtValorservicio.Text = respuesta.liquidacion.ValorServicio.ToString();
+                    txtTarifa.Text = respuesta.liquidacion.Tarifa.ToString();
+                    txtTopemaximo.Text = respuesta.liquidacion.TopeMaximo.ToString();
+                    txtCuotamoderadorareal.Text = respuesta.liquidacion.CuotaReal.ToString();
+                    txtCuotamoderadora.Text = respuesta.liquidacion.CuotaModerada.ToString();
+                }
+                else
+                {
+                    MessageBox.Show(respuesta.Mensaje);
+                }
+            }
+           
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Numeroliquidacion = txtnumerodeliquidacion.Text;
+            if (Numeroliquidacion != "")
+            {
+                RespuestaEncontrado respuesta = new RespuestaEncontrado();
+                respuesta = liquidacionCuotaModeradoraService.Buscar(Numeroliquidacion);
+                if (respuesta.liquidacion != null)
+                {
+                    txtidentificaciondelpaciente.Text = respuesta.liquidacion.IdentificacionPaciente;
+                    cmbtipodeafilacion.Text = respuesta.liquidacion.TipoAfiliacion;
+                    txtSalariodevengado.Text = respuesta.liquidacion.SalarioDevengado.ToString();
+                    txtValorservicio.Text = respuesta.liquidacion.ValorServicio.ToString();
+                    txtTarifa.Text = respuesta.liquidacion.Tarifa.ToString();
+                    txtTopemaximo.Text = respuesta.liquidacion.TopeMaximo.ToString();
+                    txtCuotamoderadorareal.Text = respuesta.liquidacion.CuotaReal.ToString();
+                    txtCuotamoderadora.Text = respuesta.liquidacion.CuotaModerada.ToString();
+                    string mensaje = liquidacionCuotaModeradoraService.Eliminar(Numeroliquidacion);
+                    MessageBox.Show(mensaje, "Mensaje de Eliminacion", MessageBoxButtons.OKCancel);
+                    Limpiar();
+                }
+
+
+                else
+                {
+                    MessageBox.Show(respuesta.Mensaje);
+                }
+            }
+        }
+                
+         private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            FrmConsultarLiquidaciones frmConsultarLiquidaciones = new FrmConsultarLiquidaciones();
+            frmConsultarLiquidaciones.Show();
         }
     }
-}
+
+    } 

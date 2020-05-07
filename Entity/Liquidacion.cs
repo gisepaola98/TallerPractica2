@@ -13,7 +13,9 @@ namespace Entity
         public string NumeroLiquidacion { get; set; }
         public decimal SalarioDevengado { get; set; }
         public decimal ValorServicio { get; set; }
-        
+        public DateTime FechaAfiliacion { get; set; }
+
+
 
 
         public decimal CuotaModerada { get; set; }
@@ -21,12 +23,12 @@ namespace Entity
         public decimal Tarifa { get; set; }
         public decimal CuotaReal { get; set; }
 
-        public abstract decimal ObtenerTarifa();
-        public abstract decimal ObtenerTope();
+        public abstract void ObtenerTarifa();
+        public abstract void  ObtenerTope();
         public void LiquidacionCuotaModerada()
         {
-            Tarifa = ObtenerTarifa();
-            TopeMaximo = ObtenerTope();
+             ObtenerTarifa();
+             ObtenerTope();
             CuotaModerada = ValorServicio * (Tarifa / 100) + ValorServicio;
             CuotaReal = CuotaModerada;
             LiquidardarCuota();

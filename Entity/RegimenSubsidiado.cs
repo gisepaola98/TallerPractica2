@@ -14,14 +14,14 @@ namespace Entity
             SalarioDevengado = 0;
         }
 
-        public override decimal ObtenerTarifa()
+        public override void  ObtenerTarifa()
         {
-            return 5;
+            Tarifa= 5;
         }
 
-        public override decimal ObtenerTope()
+        public override void ObtenerTope()
         {
-            return 200000;
+            Tarifa= 200000;
         }
     }
 }

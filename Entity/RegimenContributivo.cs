@@ -8,35 +8,36 @@ namespace Entity
 {
      public class RegimenContributivo : Liquidacion
     {
-        public override decimal ObtenerTarifa()
+        
+        public override void ObtenerTarifa()
         {
             if (SalarioDevengado < 2)
             {
-                return 15;
+               Tarifa=  15;
             }
             else if (SalarioDevengado >= 2 && SalarioDevengado <= 5)
             {
-                return 20;
+                Tarifa= 20;
             }
             else
             {
-                return 25;
+                Tarifa = 25;
             }
         }
 
-        public override decimal ObtenerTope()
+        public override void  ObtenerTope()
         {
             if (SalarioDevengado < 2)
             {
-                return 250000;
+                Tarifa=250000;
             }
             else if (SalarioDevengado >= 2 && SalarioDevengado <= 5)
             {
-                return 90000;
+                 Tarifa= 90000;
             }
             else
             {
-                return 1500000;
+               Tarifa= 1500000;
             }
         }
     }
