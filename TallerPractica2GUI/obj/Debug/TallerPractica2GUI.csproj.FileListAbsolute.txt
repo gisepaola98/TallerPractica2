@@ -3,3 +3,15 @@ C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerP
 C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.FrmConsultarLiquidaciones.resources
 C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.Properties.Resources.resources
 C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.csproj.GenerateResource.cache
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\TallerPractica2GUI.exe.config
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\TallerPractica2GUI.exe
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\TallerPractica2GUI.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\BB.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\Entity.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\DAL.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\BB.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\Entity.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\bin\Debug\DAL.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.csproj.CopyComplete
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.exe
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2GUI\obj\Debug\TallerPractica2GUI.pdb

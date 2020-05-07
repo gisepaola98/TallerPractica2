@@ -142,6 +142,33 @@ namespace TallerPractica2GUI
             FrmConsultarLiquidaciones frmConsultarLiquidaciones = new FrmConsultarLiquidaciones();
             frmConsultarLiquidaciones.Show();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            string numeroLiquidacion = txtnumerodeliquidacion.Text;
+            if (numeroLiquidacion != "")
+            {
+                RespuestaEncontrado respuesta = new RespuestaEncontrado();
+                respuesta =liquidacionCuotaModeradoraService.Buscar(numeroLiquidacion);
+                if (respuesta.liquidacion != null)
+                {
+                    respuesta.liquidacion.ValorServicio = Convert.ToInt32(txtValorservicio.Text);
+                    txtValorservicio.Text = respuesta.liquidacion.ValorServicio.ToString();
+
+                    respuesta.liquidacion.LiquidardarCuota();
+                    txtTarifa.Text = respuesta.liquidacion.Tarifa.ToString();
+                    txtTopemaximo.Text = respuesta.liquidacion.TopeMaximo.ToString();
+                    txtCuotamoderadorareal.Text = respuesta.liquidacion.CuotaReal.ToString();
+                    txtCuotamoderadora.Text = respuesta.liquidacion.CuotaModerada.ToString();
+                    string mensaje =liquidacionCuotaModeradoraService.Modificar(respuesta.liquidacion);
+                        MessageBox.Show(mensaje, "Mensaje de Modificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                }
+
+
+            }
+        }
     }
 
-    } 
+     

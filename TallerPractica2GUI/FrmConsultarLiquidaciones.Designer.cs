@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFiltrarfecha = new System.Windows.Forms.Button();
             this.cmbConsultartipo = new System.Windows.Forms.ComboBox();
@@ -62,13 +62,13 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dateTimePicker1
+            // txtFecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 56);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFecha.Location = new System.Drawing.Point(149, 56);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(86, 20);
+            this.txtFecha.TabIndex = 3;
             // 
             // label1
             // 
@@ -87,6 +87,7 @@
             this.btnFiltrarfecha.TabIndex = 5;
             this.btnFiltrarfecha.Text = "Filtar Por Fecha";
             this.btnFiltrarfecha.UseVisualStyleBackColor = true;
+            this.btnFiltrarfecha.Click += new System.EventHandler(this.btnFiltrarfecha_Click);
             // 
             // cmbConsultartipo
             // 
@@ -273,7 +274,7 @@
             this.Controls.Add(this.cmbConsultartipo);
             this.Controls.Add(this.btnFiltrarfecha);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.dgtLiquidaciones);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -288,7 +289,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFiltrarfecha;
         private System.Windows.Forms.ComboBox cmbConsultartipo;

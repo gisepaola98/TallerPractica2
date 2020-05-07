@@ -1,0 +1,13 @@
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\TallerPractica2.exe.config
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\TallerPractica2.exe
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\TallerPractica2.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\BB.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\Entity.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\DAL.dll
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\BB.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\Entity.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\bin\Debug\DAL.pdb
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\obj\Debug\TallerPractica2.csprojAssemblyReference.cache
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\obj\Debug\TallerPractica2.csproj.CopyComplete
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\obj\Debug\TallerPractica2.exe
+C:\Users\gisem\source\repos\TallerPractica2\TallerPractica2\obj\Debug\TallerPractica2.pdb

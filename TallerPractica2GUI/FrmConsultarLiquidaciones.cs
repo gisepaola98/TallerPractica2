@@ -14,7 +14,7 @@ namespace TallerPractica2GUI
 {
     public partial class FrmConsultarLiquidaciones : Form
     {
-        LiquidacionCuotaModeradoraService liquidacionCuotaService ;
+        LiquidacionCuotaModeradoraService liquidacionCuotaService;
 
         public FrmConsultarLiquidaciones()
         {
@@ -31,7 +31,7 @@ namespace TallerPractica2GUI
                 RespuestaTotalTipo totalTipo = new RespuestaTotalTipo();
                 RepuestaTotalCuotaModeradora totalCuotaModeradora = new RepuestaTotalCuotaModeradora();
                 RespuestaTotalCuotaTipo totalCuotaTipo = new RespuestaTotalCuotaTipo();
-               RespuestaTotalLiquidacion totalLiquidacion = new RespuestaTotalLiquidacion();
+                RespuestaTotalLiquidacion totalLiquidacion = new RespuestaTotalLiquidacion();
                 respuesta = liquidacionCuotaService.Consultar();
                 dgtLiquidaciones.DataSource = respuesta.liquidaciones;
                 totalLiquidacion = liquidacionCuotaService.TotalLiquidacione();
@@ -54,7 +54,7 @@ namespace TallerPractica2GUI
                 RespuestaTotalLiquidacion totalLiquidacion = new RespuestaTotalLiquidacion();
                 RespuestaTotalTipo totalTipo = new RespuestaTotalTipo();
                 RepuestaTotalCuotaModeradora totalCuotaModeradora = new RepuestaTotalCuotaModeradora();
-                respuesta =liquidacionCuotaService.TipoAfiliacion("Contributivo");
+                respuesta = liquidacionCuotaService.TipoAfiliacion("Contributivo");
                 MessageBox.Show(respuesta.Mensaje);
                 dgtLiquidaciones.DataSource = respuesta.liquidaciones;
                 txtLiquidaciones.Text = "0";
@@ -63,7 +63,7 @@ namespace TallerPractica2GUI
                 txtRegimencontributivo.Text = totalTipo.Total.ToString();
                 txtLiquidaciones.Text = "0";
                 txtRegimensubsidiado.Text = "0";
-                totalTipo =liquidacionCuotaService.TotalTipo("Contributivo");
+                totalTipo = liquidacionCuotaService.TotalTipo("Contributivo");
                 txtRegimencontributivo.Text = totalTipo.Total.ToString();
 
             }
@@ -89,5 +89,15 @@ namespace TallerPractica2GUI
             }
 
         }
+
+        private void btnFiltrarfecha_Click(object sender, EventArgs e)
+        {
+
+            string Fecha = txtFecha.Text;
+            if (txtFecha.Text != "")
+            {
+                dgtLiquidaciones.DataSource =liquidacionCuotaService.BuscarPalabra(Fecha);
+            }
         }
-    } }
+    }
+}   

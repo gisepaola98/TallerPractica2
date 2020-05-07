@@ -1,1 +1,10 @@
 C:\Users\gisem\source\repos\TallerPractica2\BB\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\BB.dll
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\BB.pdb
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\DAL.dll
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\Entity.dll
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\DAL.pdb
+C:\Users\gisem\source\repos\TallerPractica2\BB\bin\Debug\Entity.pdb
+C:\Users\gisem\source\repos\TallerPractica2\BB\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\gisem\source\repos\TallerPractica2\BB\obj\Debug\BB.dll
+C:\Users\gisem\source\repos\TallerPractica2\BB\obj\Debug\BB.pdb
